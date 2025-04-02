@@ -19,7 +19,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const cart = useCart()
   
   return (
-    <CartContext.Provider value={cart}>
+    <CartContext.Provider value = {cart}>
       {children}
     </CartContext.Provider>
   )

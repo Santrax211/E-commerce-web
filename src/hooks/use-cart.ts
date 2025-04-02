@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { toast } from "@/components/ui/use-toast"
 
+
 export type CartItem = {
   id: string | number
   name: string
@@ -50,7 +51,7 @@ export function useCart() {
         
         toast({
           title: "Producto actualizado",
-          description: ${item.name} cantidad actualizada en el carrito
+          description: `${item.name} cantidad actualizada en el carrito`
         })
         
         return updatedItems
@@ -58,7 +59,7 @@ export function useCart() {
         // Añadir nuevo item
         toast({
           title: "Producto añadido",
-          description: ${item.name} añadido al carrito
+          description: `${item.name} añadido al carrito`
         })
         
         return [...prevItems, item]
@@ -85,7 +86,7 @@ export function useCart() {
       if (itemToRemove) {
         toast({
           title: "Producto eliminado",
-          description: ${itemToRemove.name} eliminado del carrito
+          description: `${itemToRemove.name} eliminado del carrito`
         })
       }
       
